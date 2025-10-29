@@ -1,18 +1,4 @@
-// SPDX-License-Identifier: MIT
-pragma solidity ^0.8.20;
-
-/**
- * @title HashNexus
- * @dev A decentralized platform for securely storing and verifying document hashes on the blockchain.
- * Each document is represented by its unique hash. Users can register and verify document authenticity.
- */
-contract Project {
-    struct Document {
-        address owner;
-        uint256 timestamp;
-    }
-
-    // Mapping of document hash to its details
+Mapping of document hash to its details
     mapping(bytes32 => Document) private documents;
 
     event DocumentRegistered(bytes32 indexed docHash, address indexed owner, uint256 timestamp);
@@ -48,3 +34,6 @@ contract Project {
         return documents[docHash].timestamp != 0;
     }
 }
+// 
+update
+// 
